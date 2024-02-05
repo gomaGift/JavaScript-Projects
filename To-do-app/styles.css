@@ -1,0 +1,166 @@
+*, 
+*::after,
+*::before {
+    font-family: Lato,sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+
+body {
+    margin: 4em;
+    padding: 0;
+    background: rgb(140, 27, 245);
+    color: white;
+    width: 100vw;
+    min-width: 400px;
+    height: 100vh;
+    display: flex;
+   gap: 5rem;
+   justify-content: center;
+   
+    
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category__item {
+   margin: 0 0 0 1rem;
+   list-style-type: circle;
+   line-height: 25px;
+}
+
+a {
+    color: gainsboro;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+ .categoryTag:focus, .categoryTag:hover, .categoryTag:active {
+    color: white;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+  
+    font-family: inherit;
+    color: white;
+    
+}
+
+.to-do-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+    
+   
+}
+
+.to-do-pane {
+    
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    
+}
+
+.to-do-header {
+    display: flex;
+    align-items: center;
+    background: rgb(213, 211, 211);
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+
+    
+}
+
+.to-do-items {
+    margin-left: 1.5rem;
+    list-style-type: circle;
+}
+
+.ul__checkbox {
+    list-style-type: none;
+    line-height: 30px;
+}
+
+.checkbox {
+
+    display: block;
+    cursor: pointer;
+}
+
+ .input-checkbox{
+  appearance: none;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: .5rem;
+ 
+   
+}
+
+input[type="checkbox"]:checked {
+    background-color: #777; /* Change background color when checked */
+  }
+
+  input[type="checkbox"] + label {
+    display: inline-block;
+    line-height: 25px;
+  }
+
+  
+.checkbox__li {
+    border-bottom: 1px solid rgb(236, 230, 230);
+   
+   
+
+}
+
+.to-do-input {
+    padding:   10px;
+}
+
+#to-do-input {
+   
+    color: black;
+    border-bottom: 1px solid rgb(133, 131, 131);
+}
+
+.modify-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-family: inherit;
+    background: transparent;
+    color: white;
+    padding: .2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: aqua;
+}
+
+.items-remaining {
+    font-size: .7rem;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="category">
+      <h2 class="my-categories">My lists</h2>
+      <ul class="category__item">
+        
+      </ul>
+      <div class="input">
+        <form action="" class="cat-form">
+          <label for="category-input">+</label>
+          <input type="text" name="category-item" id="category-input" value=""/>
+        </form>
+      </div>
+    </div>
+
+    <div class="to-do-section">
+      <div class="to-do-pane">
+        <div class="to-do-header">
+          <h2 class="category-div">Category</h2>
+          <p class="items-remaining"></p>
+        </div>
+
+        <div class="to-do-items">
+          <ul class="ul__checkbox">
+          </ul>
+        </div>
+
+        <form class="to-do-input">
+          <label for="to-do-input">+</label>
+          <input
+            type="text"
+            name="to-do-item"
+            id="to-do-input"
+            placeholder="enter to do item"
+          />
+        </form>
+      </div>
+      <div class="modify-list">
+        <button class="clear">Clear completed items</button>
+        <button class="delete-list">Delete list</button>
+      </div>
+    </div>
+  </body>
+</html>
