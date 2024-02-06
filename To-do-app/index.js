@@ -5,7 +5,7 @@ let catItem=""
 const itemsRemaining = document.querySelector(".items-remaining")
 const deleteButtom = document.querySelector(".delete-list")
 const clearCompletedBtn = document.querySelector(".clear")
-
+let activeTag = ""
 
 
 const categoryInput = document.querySelector("#category-input")
@@ -41,9 +41,17 @@ categoryForm.addEventListener("submit", (e) => {
     // category switch
     anchorTag.addEventListener('click', (e)=> {
     e.preventDefault()
-       
+       const tagItems = document.querySelectorAll(".categoryTag")
+       for (let i = 0; i < tagItems.length; i++){
+        const tag = tagItems[i]
+        if (tag.innerHTML === activeTag)
+            tag.style.color = "gainsboro"
+       }
+    
+
        categoryHeader = anchorTag.innerHTML
-       
+       activeTag = categoryHeader
+       anchorTag.style.color = "white"
        // set the to-do header to the clicked category
        toDoHeader = document.querySelector(".category-div")
        toDoHeader.innerHTML = categoryHeader
@@ -70,8 +78,6 @@ toDoInput.addEventListener('input', (e) => {
     toDoItem = e.target.value
     
 })
-
-
 const toDoForm = document.querySelector(".to-do-input")
 toDoForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -95,12 +101,10 @@ toDoForm.addEventListener('submit', (e) => {
     li.appendChild(label)
     li.addEventListener('click', () => {
         li.style.textDecoration= "line-through"
-
         
     })
     
     // add the li the current categories existing array
-    
     categories[categoryHeader] = [...categories[categoryHeader], li]
 
     // display the to-do list
@@ -116,11 +120,9 @@ deleteButtom.addEventListener('click', (e) => {
     e.preventDefault()
     // assign the current Category list to an empty array and clear the the list output
     categories[categoryHeader] = []
- 
     toDolist.innerHTML = ""
     itemsRemaining.innerHTML = `${categories[categoryHeader].length} items remaining`
 })
-
 
 /* Clear completed items */
 clearCompletedBtn.addEventListener('click', () => {
@@ -135,7 +137,6 @@ clearCompletedBtn.addEventListener('click', () => {
     }
  }
  itemsRemaining.innerHTML = `${categories[categoryHeader].length} items remaining`
-
 
 })
  
